@@ -1,12 +1,43 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>가록 — 새 주소로 옮겼습니다</title>
+<title>DATASMITH가 가록으로 새 단장했습니다</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:#F3EEE3;color:#1F1B16;font-family:Pretendard,system-ui,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;text-align:center;padding:24px;word-break:keep-all}
+.c{width:100%;max-width:420px;background:#FBF8F2;border:1px solid rgba(31,27,22,.1);border-radius:24px;padding:36px 26px 28px;animation:in .5s ease both}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.logo{display:block;margin:0 auto 22px;height:44px;width:auto}
+.old{display:inline-block;font-size:13px;letter-spacing:.06em;color:#8A8278;text-decoration:line-through;margin-bottom:6px}
+h1{margin:0 0 12px;font-size:21px;line-height:1.45;font-weight:800}
+h1 b{color:#A8432F}
+p{margin:0 0 6px;font-size:14.5px;line-height:1.7;color:#4A443C}
+.addr{display:inline-block;margin:14px 0 20px;padding:8px 16px;border-radius:999px;background:#F1E4DA;color:#A8432F;font-weight:800;font-size:16px}
+.bar{height:4px;border-radius:4px;background:rgba(31,27,22,.08);overflow:hidden;margin:4px 0 10px}
+.bar i{display:block;height:100%;width:0;background:#A8432F;animation:go 3s linear forwards}
+@keyframes go{to{width:100%}}
+.s{font-size:12.5px;color:#8A8278;margin:0 0 16px}
+a.btn{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:999px;background:#1F1B16;color:#FBF8F2;text-decoration:none;font-weight:700;font-size:15px}
+@media (prefers-reduced-motion:reduce){.c,.bar i{animation:none}.bar i{width:100%}}
+</style>
+</head><body>
+<main class="c" role="main">
+  <img class="logo" src="/brand/datasmith-on-light.png" alt="가록 家.log">
+  <span class="old">DATASMITH</span>
+  <h1>DATASMITH가 새 이름<br><b>「가록」</b>으로 새 단장했습니다</h1>
+  <p>계정과 그동안 남기신 기록은 모두 그대로입니다.</p>
+  <p>이제 서비스는 새 주소에서 이용하실 수 있습니다.</p>
+  <span class="addr">galog.kr</span>
+  <div class="bar" aria-hidden="true"><i></i></div>
+  <p class="s">잠시 뒤 새 주소로 이동합니다</p>
+  <a class="btn" id="go" href="https://galog.kr/">지금 이동하기</a>
+</main>
 <script>
 (function(){var o={},n=0;try{for(var i=0;i<localStorage.length;i++){var k=localStorage.key(i);o[k]=localStorage.getItem(k);n++}}catch(e){}
 var t='https://galog.kr'+location.pathname+location.search,h=location.hash.replace(/^#/,''),b='';
 try{if(n){var u=new TextEncoder().encode(JSON.stringify(o)),s='';for(var j=0;j<u.length;j++)s+=String.fromCharCode(u[j]);b=btoa(s).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');if(b.length>1500000)b=''}}catch(e){b=''}
-var f=h;if(b)f=(f?f+'&':'')+'ds-move='+b;location.replace(t+(f?'#'+f:''))})();
+var f=h;if(b)f=(f?f+'&':'')+'ds-move='+b;var to=t+(f?'#'+f:'');
+var a=document.getElementById('go');if(a)a.href=to;
+setTimeout(function(){location.replace(to)},3000)})();
 </script>
-<meta http-equiv="refresh" content="3;url=https://galog.kr/">
-<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#F3EEE3;color:#1F1B16;font-family:system-ui,'Apple SD Gothic Neo',sans-serif;text-align:center}a{color:#A8432F}</style>
-</head><body><p>가록이 새 주소로 옮겼습니다.<br><a href="https://galog.kr/">galog.kr 로 가기</a></p></body></html>
+<noscript><meta http-equiv="refresh" content="3;url=https://galog.kr/"></noscript>
+</body></html>
